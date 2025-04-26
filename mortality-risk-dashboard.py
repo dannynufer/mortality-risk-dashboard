@@ -6,8 +6,8 @@ import matplotlib.pyplot as plt
 # load life tables
 @st.cache_data
 def load_life_tables():
-    male_df = pd.read_csv('life_tables/male_lt.csv', skiprows=1)
-    female_df = pd.read_csv('life_tables/female_lt.csv', skiprows=1)
+    male_df = pd.read_csv('life_tables/male_lt.csv')
+    female_df = pd.read_csv('life_tables/female_lt.csv')
 
     # Convert all columns to numbers, force bad values to NaN
     male_df = male_df.apply(pd.to_numeric, errors='coerce')
